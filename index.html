@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Solar EPC CRM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="loginPage" class="container">
+  <div class="card">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="ID">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="loginError"></p>
+  </div>
+</div>
+
+<div id="crmPage" class="container" style="display:none;">
+
+<h1>Solar EPC CRM</h1>
+<button onclick="logout()">Logout</button>
+
+<div class="card">
+<h2>Add Lead</h2>
+
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+<input id="city" placeholder="City">
+<input id="kw" placeholder="kW">
+
+<textarea id="remarks" placeholder="Remarks"></textarea>
+
+<button onclick="addLead()">Save</button>
+<button onclick="exportToExcel()">Export</button>
+</div>
+
+<div class="card">
+<h2>Leads</h2>
+<ul id="leadList"></ul>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
